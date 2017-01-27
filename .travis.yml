@@ -9,3 +9,13 @@ before_script:
 - flake8 hippy_chat
 - flake8 tests
 script: py.test tests
+deploy:
+  provider: pypi
+  user: pip-install-this
+  password:
+    secure: mmAYHzfDIUWqSZpKwhp8xsGMR0tF0cWmzUa4VHvjPfcQC1q6vRydUSd5hd2UFiwodb2uhgxmuyYozm65kRtLk1m4SnhjY+pF/nNgGP7zC7i5r+lcMwwJ4eCsmZ1wY7ZUqnDwIX8kYBcIlFeVI+amSrIlOrRjUChgtsHRSTmsvefMMcpJq6Ifinz4uTrP2FhHIb9dS4ZClUozrz9jQo+iV1O1//9gtCyajCA5jTsyZn/typ+gdU6UL5q7pvoi7MGhL9mY6vr3Po0qfGBCHjZR0Qn9+eTKcMZMWBbKcOmN4wklC3uLpHbUbj6Ap0x5FP7TVxkhXWIAzVBBEGw8SxqQch5/pGXCOFRC+/Gzl5XdpF7D4L++tIrl+HqYfkPTKoDisb87l3rkHTPzwUevS816YAsDt/Y7FKZsRP95LcdDPwRZfU/yqXO+kw7ZpvrwGUzLEsgOFtVj8LX/qjCzbxjrdfWyuiaLZy+Q3O1S48mV8QtoZ064fSZS4NMq9AvHUlhPJ1MvjUki9gyCT8a4wC/GisHrhX0kcxYHI1SJ40OVqSTfxKwl97LzDUIyRUxMo7l7+Adsy2Yosyzb0CnC+zDkejMbsPgCBNEN6bcgDp26A7dpjGZArCC058XwCn4Ms5+th4CPjmFzjZPVN5IjAQFtEFfkooGs9lBc7kPPGTgPVbg=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: pip-install-this/hippy-chat
+    branch: pip-install-this/changelog-updates
