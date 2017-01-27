@@ -12,3 +12,5 @@ Unreleased
 - This CHANGELOG
 - README providing a brief overview of the project
 - First release of hippy-chat
+ - Added project documentation pages
+ - Set up travis-ci integration
